@@ -1,0 +1,8 @@
+ko:
+  text_markitdown_available: MarkItDown 사용 가능
+  text_markitdown_not_available: MarkItDown 사용 불가
+  label_markitdown_command: MarkItDown 명령
+  label_markitdown_preview_generation_timeout: 미리보기 생성 제한 시간
+  label_markitdown_preview_max_source_size: 원본 파일 최대 크기
+  label_markitdown_preview_max_output_size: 미리보기 최대 크기
+  label_markitdown_supported_extensions: 지원되는 확장자

@@ -1,0 +1,8 @@
+de:
+  text_markitdown_available: MarkItDown verfügbar
+  text_markitdown_not_available: MarkItDown nicht verfügbar
+  label_markitdown_command: MarkItDown-Befehl
+  label_markitdown_preview_generation_timeout: Zeitlimit für Vorschau-Erzeugung
+  label_markitdown_preview_max_source_size: Maximale Quelldateigröße
+  label_markitdown_preview_max_output_size: Maximale Vorschaugröße
+  label_markitdown_supported_extensions: Unterstützte Dateiendungen

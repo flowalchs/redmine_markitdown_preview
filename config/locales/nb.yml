@@ -1,0 +1,8 @@
+nb:
+  text_markitdown_available: MarkItDown tilgjengelig
+  text_markitdown_not_available: MarkItDown ikke tilgjengelig
+  label_markitdown_command: MarkItDown-kommando
+  label_markitdown_preview_generation_timeout: Tidsavbrudd for forhåndsvisning
+  label_markitdown_preview_max_source_size: Maksimal størrelse på kildefil
+  label_markitdown_preview_max_output_size: Maksimal forhåndsvisningsstørrelse
+  label_markitdown_supported_extensions: Støttede filendelser

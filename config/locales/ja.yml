@@ -1,0 +1,8 @@
+ja:
+  text_markitdown_available: MarkItDown利用可能
+  text_markitdown_not_available: MarkItDown利用不可
+  label_markitdown_command: MarkItDownコマンド
+  label_markitdown_preview_generation_timeout: プレビュー生成タイムアウト
+  label_markitdown_preview_max_source_size: 元ファイルの最大サイズ
+  label_markitdown_preview_max_output_size: プレビューの最大サイズ
+  label_markitdown_supported_extensions: サポートされる拡張子

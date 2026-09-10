@@ -1,0 +1,8 @@
+zh-TW:
+  text_markitdown_available: MarkItDown 可用
+  text_markitdown_not_available: MarkItDown 不可用
+  label_markitdown_command: MarkItDown 指令
+  label_markitdown_preview_generation_timeout: 預覽產生逾時時間
+  label_markitdown_preview_max_source_size: 來源檔案最大大小
+  label_markitdown_preview_max_output_size: 預覽最大大小
+  label_markitdown_supported_extensions: 支援的副檔名

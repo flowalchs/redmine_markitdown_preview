@@ -1,0 +1,8 @@
+sv:
+  text_markitdown_available: MarkItDown tillgängligt
+  text_markitdown_not_available: MarkItDown inte tillgängligt
+  label_markitdown_command: MarkItDown-kommando
+  label_markitdown_preview_generation_timeout: Tidsgräns för förhandsgranskning
+  label_markitdown_preview_max_source_size: Maximal storlek på källfil
+  label_markitdown_preview_max_output_size: Maximal storlek på förhandsgranskning
+  label_markitdown_supported_extensions: Filändelser som stöds

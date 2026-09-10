@@ -1,0 +1,6 @@
+---
+  markitdown_command:
+  markitdown_preview_generation_timeout: 10
+  markitdown_preview_max_source_size: 10485760
+  markitdown_preview_max_output_size: 102400
+  markitdown_supported_extensions: '.xls .msg .csv'

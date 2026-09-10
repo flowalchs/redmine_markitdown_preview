@@ -1,0 +1,78 @@
+<fieldset class="box">
+  <legend>MarkItDown Preview</legend>
+  <p>
+    <% if RedmineMarkitdownPreview::Converter.available? %>
+      <span class="icon icon-checked">
+        <%= l(:text_markitdown_available) %>
+      </span>
+    <% else %>
+      <span class="icon icon-warning">
+        <%= l(:text_markitdown_not_available) %>
+      </span>
+    <% end %>
+  </p>
+  <p>
+    <%= label_tag(
+          'settings[markitdown_command]',
+          l(:label_markitdown_command)
+        ) %>
+    <%= text_field_tag(
+          'settings[markitdown_command]',
+          RedmineMarkitdownPreview::Converter.command,
+          size: 80
+        ) %>
+  </p>
+
+  <p>
+    <%= label_tag(
+          'settings[markitdown_preview_generation_timeout]',
+          l(:label_markitdown_preview_generation_timeout)
+        ) %>
+    <%= text_field_tag(
+          'settings[markitdown_preview_generation_timeout]',
+          RedmineMarkitdownPreview::Converter.preview_generation_timeout,
+          size: 10
+        ) %>
+    <em><%= l(:field_timeout) %></em>
+  </p>
+
+  <p>
+    <%= label_tag(
+          'settings[markitdown_preview_max_source_size]',
+          l(:label_markitdown_preview_max_source_size)
+        ) %>
+    <%= text_field_tag(
+          'settings[markitdown_preview_max_source_size]',
+          RedmineMarkitdownPreview::Converter.maximum_source_size,
+          size: 15
+        ) %>
+    <em>bytes (0 = unlimited)</em>
+  </p>
+
+  <p>
+    <%= label_tag(
+          'settings[markitdown_preview_max_output_size]',
+          l(:label_markitdown_preview_max_output_size)
+        ) %>
+    <%= text_field_tag(
+          'settings[markitdown_preview_max_output_size]',
+          RedmineMarkitdownPreview::Converter.maximum_output_size,
+          size: 15
+        ) %>
+    <em>bytes</em>
+  </p>
+
+  <p>
+    <%= label_tag(
+          'settings[markitdown_supported_extensions]',
+          l(:label_markitdown_supported_extensions)
+        ) %>
+    <%= text_field_tag(
+          'settings[markitdown_supported_extensions]',
+          RedmineMarkitdownPreview::Converter.supported_extensions,
+          size: 80
+        ) %>
+    <br>
+    <em>.docx .xlsx .xls .pptx .msg .csv .epub</em>
+  </p>
+</fieldset>

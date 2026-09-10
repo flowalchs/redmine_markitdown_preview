@@ -1,0 +1,8 @@
+pt-BR:
+  text_markitdown_available: MarkItDown disponível
+  text_markitdown_not_available: MarkItDown indisponível
+  label_markitdown_command: Comando do MarkItDown
+  label_markitdown_preview_generation_timeout: Tempo limite para geração da visualização
+  label_markitdown_preview_max_source_size: Tamanho máximo do arquivo de origem
+  label_markitdown_preview_max_output_size: Tamanho máximo da visualização
+  label_markitdown_supported_extensions: Extensões suportadas

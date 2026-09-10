@@ -1,0 +1,8 @@
+ru:
+  text_markitdown_available: MarkItDown доступен
+  text_markitdown_not_available: MarkItDown недоступен
+  label_markitdown_command: Команда MarkItDown
+  label_markitdown_preview_generation_timeout: Тайм-аут создания предпросмотра
+  label_markitdown_preview_max_source_size: Максимальный размер исходного файла
+  label_markitdown_preview_max_output_size: Максимальный размер предпросмотра
+  label_markitdown_supported_extensions: Поддерживаемые расширения
