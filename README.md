@@ -3,7 +3,7 @@
 [![build](https://github.com/flowalchs/redmine_markitdown_preview/actions/workflows/build.yml/badge.svg)](https://github.com/flowalchs/redmine_markitdown_preview/actions/workflows/build.yml)
 [![Last release](https://img.shields.io/github/v/release/flowalchs/redmine_markitdown_preview?label=latest%20release&logo=github&style=flat-square)](https://github.com/flowalchs/redmine_markitdown_preview/releases/latest)
 [![Rate at redmine.org](http://img.shields.io/badge/rate%20at-redmine.org-blue.svg?style=flat-square)](https://www.redmine.org/plugins/redmine_markitdown_preview)
-[![Redmine](https://img.shields.io/badge/redmine->=4.2-blue?logo=redmine&logoColor=%23B32024&labelColor=f0f0f0)](https://www.redmine.org)
+[![Redmine](https://img.shields.io/badge/redmine->=5-blue?logo=redmine&logoColor=%23B32024&labelColor=f0f0f0)](https://www.redmine.org)
 [![codecov](https://codecov.io/gh/flowalchs/redmine_markitdown_preview/graph/badge.svg?token=17Z5COBFM1)](https://codecov.io/gh/flowalchs/redmine_markitdown_preview)
 
 This plugin adds attachment previews using [Microsoft MarkItDown](https://github.com/microsoft/markitdown) converter for Office documents, Outlook messages and other supported formats.
@@ -56,12 +56,12 @@ Generated previews are stored as cached `.md` files and rendered through the nor
   <table>
     <tr>
       <td align="center">
-        <img src="./docs/screenshots/preview-msg.png" width="265px" />
+        <img src="./docs/screenshots/preview-msg.png" width="325px" />
         <br>
         <sub><b>Preview .msg</b></sub>
       </td>
       <td align="center">
-        <img src="./docs/screenshots/plugin-settings.png" width="265px" />
+        <img src="./docs/screenshots/plugin-settings.png" width="325px" />
         <br>
         <sub><b>Plugin Settings</b></sub>
       </td>
@@ -108,7 +108,7 @@ Additional extensions can be configured from the plugin settings page.
 
 ### Redmine
 
-- Redmine 4.2 or newer
+- Redmine 5 or newer
 
 ### Microsoft MarkItDown
 
