@@ -56,12 +56,12 @@ Generated previews are stored as cached `.md` files and rendered through the nor
   <table>
     <tr>
       <td align="center">
-        <img src="./docs/screenshots/preview-msg.png" width="325px" />
+        <img src="./docs/screenshots/preview-msg.png" width="355px" />
         <br>
         <sub><b>Preview .msg</b></sub>
       </td>
       <td align="center">
-        <img src="./docs/screenshots/plugin-settings.png" width="325px" />
+        <img src="./docs/screenshots/plugin-settings.png" width="355px" />
         <br>
         <sub><b>Plugin Settings</b></sub>
       </td>
@@ -189,7 +189,7 @@ Preview files are automatically removed when the corresponding attachment is del
 
 ## Uninstall
 
-No database tables or migrations are created by this plugin.
+No database tables or migrations are created by this plugin.  
 To uninstall, simply remove the plugin directory:
 
 ```bash
