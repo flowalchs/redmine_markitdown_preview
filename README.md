@@ -25,16 +25,20 @@ The plugin focuses on providing lightweight, searchable previews of document con
 - Markdown based attachment previews
 - Outlook `.msg` preview support
 - Excel `.xls` preview support
-- CSV preview support
 - Microsoft Office document previews (`.docx`, `.xlsx`, `.pptx`)
 - EPUB preview support
-- Configurable file type support
-- Configurable conversion timeout
-- Configurable source and output size limits
 - Preview caching for improved performance
-- Automatic cleanup of preview cache files
 - Compatible with older Redmine releases
 - Can be used together with Redmine's Pandoc preview implementation
+- Flexible configuration options (supported extensions, conversion timeout, source/output limits and converter command, see #configuration)
+
+### Document Content
+
+MarkItDown previews focus on textual document content.
+
+Currently, embedded images contained in Office documents (for example `.docx` files) are not exported into the generated Markdown preview. Such images are therefore not displayed in the rendered Redmine preview.
+
+The original attachment itself remains unaffected and can still be downloaded normally.
 
 ## Rendering and Security
 
