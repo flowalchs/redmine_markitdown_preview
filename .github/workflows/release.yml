@@ -31,32 +31,24 @@ jobs:
           PREVIOUS_TAG=$(git describe --tags --abbrev=0 HEAD^ 2>/dev/null || echo "")
           
           if [ -z "$PREVIOUS_TAG" ]; then
-            COMMITS=$(git log --pretty=format:"* %s" | grep "#" | sort -u)
+            RANGE=""
           else
-            COMMITS=$(git log ${PREVIOUS_TAG}..HEAD \
-              --pretty=format:"%s" \
-              | grep -E '#[0-9]+' \
-              | awk '
-                {
-                  match($0, /#[0-9]+/)
-                  issue=substr($0, RSTART, RLENGTH)
-                  if (!seen[issue]++) print "* " $0
-                }
-              ' \
-              | sort)
+            RANGE="${PREVIOUS_TAG}..HEAD"
           fi
+
+          COMMITS=$(git log $RANGE --pretty=format:"* %s" | sort -u)
 
           # Erstelle den Block mit Leerzeilen davor und danach
           # \n am Anfang sorgt für die Leerzeile nach "# Changelog"
-          echo -e "\n## ${{ env.version }} ($DATE)\n$COMMITS" > current_changes.md
+          echo -e "\n## ${{ env.version }} ($DATE)\n$COMMITS" > /tmp/current_changes.md
           
           if [ -f CHANGELOG.md ]; then
             # Fügt den Block direkt nach der ersten Zeile (# Changelog) ein
-            sed -i '1r current_changes.md' CHANGELOG.md
+            sed -i '1r /tmp/current_changes.md' CHANGELOG.md
           else
             # Falls die Datei fehlt, neu erstellen
             echo "# Changelog" > CHANGELOG.md
-            cat current_changes.md >> CHANGELOG.md
+            cat /tmp/current_changes.md >> CHANGELOG.md
           fi
 
       - name: Commit Changelog
@@ -75,6 +67,6 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          body_path: current_changes.md # Nutzt die gefilterten Commits als Release-Text
+          body_path: /tmp/current_changes.md # Nutzt die gefilterten Commits als Release-Text
           draft: true
           files: ${{ env.filename }}.zip

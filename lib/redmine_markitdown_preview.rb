@@ -3,7 +3,7 @@
 require 'redmine_plugin_kit'
 
 module RedmineMarkitdownPreview
-  VERSION = '1.0.0'
+  VERSION = '1.0.1'
 
   include RedminePluginKit::PluginBase
 
