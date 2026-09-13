@@ -2,13 +2,17 @@
   <legend>MarkItDown Preview</legend>
   <p>
     <% if RedmineMarkitdownPreview::Converter.available? %>
-      <span class="icon icon-checked">
-        <%= l(:text_markitdown_available) %>
-      </span>
+      <% if respond_to?(:sprite_icon) %>
+        <%= sprite_icon('checked', l(:text_markitdown_available)) %>
+      <% else %>
+        <span class="icon icon-checked"><%= l(:text_markitdown_available) %></span>
+      <% end %>
     <% else %>
-      <span class="icon icon-warning">
-        <%= l(:text_markitdown_not_available) %>
-      </span>
+      <% if respond_to?(:sprite_icon) %>
+        <%= sprite_icon('warning', l(:text_markitdown_not_available)) %>
+      <% else %>
+        <span class="icon icon-warning"><%= l(:text_markitdown_not_available) %></span>
+      <% end %>
     <% end %>
   </p>
   <p>
