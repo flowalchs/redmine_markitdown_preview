@@ -2,7 +2,7 @@
 
 [![build](https://github.com/flowalchs/redmine_markitdown_preview/actions/workflows/build.yml/badge.svg)](https://github.com/flowalchs/redmine_markitdown_preview/actions/workflows/build.yml)
 [![Last release](https://img.shields.io/github/v/release/flowalchs/redmine_markitdown_preview?label=latest%20release&logo=github&style=flat-square)](https://github.com/flowalchs/redmine_markitdown_preview/releases/latest)
-[![Rate at redmine.org](http://img.shields.io/badge/rate%20at-redmine.org-blue.svg?style=flat-square)](https://www.redmine.org/plugins/redmine_markitdown_preview)
+[![Rate at redmine.org](http://img.shields.io/badge/rate%20at-redmine.org-yellow.svg?style=flat-square)](https://www.redmine.org/plugins/redmine_markitdown_preview)
 [![Redmine](https://img.shields.io/badge/redmine->=5-blue?logo=redmine&logoColor=%23B32024&labelColor=f0f0f0)](https://www.redmine.org)
 [![codecov](https://codecov.io/gh/flowalchs/redmine_markitdown_preview/graph/badge.svg?token=17Z5COBFM1)](https://codecov.io/gh/flowalchs/redmine_markitdown_preview)
 
@@ -30,7 +30,7 @@ The plugin focuses on providing lightweight, searchable previews of document con
 - Preview caching for improved performance
 - Compatible with older Redmine releases
 - Can be used together with Redmine's Pandoc preview implementation
-- Flexible configuration options (supported extensions, conversion timeout, source/output limits and converter command, see #configuration)
+- Flexible configuration options
 
 ### Document Content
 
