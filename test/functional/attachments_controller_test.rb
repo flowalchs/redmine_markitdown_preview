@@ -91,6 +91,8 @@ class AttachmentsControllerTest < MarkitdownPreview::Test::ControllerCase
       assert_select 'li', text: 'Multiple projects support'
       assert_select 'li', text: 'Flexible issue tracking system'
       assert_select 'li', text: 'Time tracking'
+      assert_select 'p img[alt=""]', count: 1
+      assert_select 'p img:not([src])', count: 1
 
       assert_select '.nodata', count: 0
 
