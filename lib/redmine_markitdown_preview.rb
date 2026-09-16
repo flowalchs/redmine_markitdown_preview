@@ -28,7 +28,6 @@ module RedmineMarkitdownPreview
                           SettingsController]
 
       loader.apply!
-      loader.load_view_hooks!
     end
   end
 end
