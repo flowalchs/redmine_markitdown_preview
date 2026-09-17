@@ -36,7 +36,11 @@ jobs:
             RANGE="${PREVIOUS_TAG}..HEAD"
           fi
 
-          COMMITS=$(git log $RANGE --pretty=format:"* %s" | sort -u)
+          COMMITS=$(git log $RANGE --pretty=format:"%s" \
+            | grep -iv "^docs: update CHANGELOG.md for" \
+            | grep -iv "^release " \
+            | sort -u \
+            | sed 's/^/* /')
 
           # Erstelle den Block mit Leerzeilen davor und danach
           # \n am Anfang sorgt für die Leerzeile nach "# Changelog"
