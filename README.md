@@ -2,7 +2,7 @@
 
 [![build](https://github.com/flowalchs/redmine_markitdown_preview/actions/workflows/build.yml/badge.svg)](https://github.com/flowalchs/redmine_markitdown_preview/actions/workflows/build.yml)
 [![Last release](https://img.shields.io/github/v/release/flowalchs/redmine_markitdown_preview?label=latest%20release&logo=github&style=flat-square)](https://github.com/flowalchs/redmine_markitdown_preview/releases/latest)
-[![Rate at redmine.org](http://img.shields.io/badge/rate%20at-redmine.org-blue.svg?style=flat-square)](https://www.redmine.org/plugins/redmine_markitdown_preview)
+[![Rate at redmine.org](http://img.shields.io/badge/rate%20at-redmine.org-yellow.svg?style=flat-square)](https://www.redmine.org/plugins/redmine_markitdown_preview)
 [![Redmine](https://img.shields.io/badge/redmine->=5-blue?logo=redmine&logoColor=%23B32024&labelColor=f0f0f0)](https://www.redmine.org)
 [![codecov](https://codecov.io/gh/flowalchs/redmine_markitdown_preview/graph/badge.svg?token=17Z5COBFM1)](https://codecov.io/gh/flowalchs/redmine_markitdown_preview)
 
@@ -25,16 +25,20 @@ The plugin focuses on providing lightweight, searchable previews of document con
 - Markdown based attachment previews
 - Outlook `.msg` preview support
 - Excel `.xls` preview support
-- CSV preview support
 - Microsoft Office document previews (`.docx`, `.xlsx`, `.pptx`)
 - EPUB preview support
-- Configurable file type support
-- Configurable conversion timeout
-- Configurable source and output size limits
 - Preview caching for improved performance
-- Automatic cleanup of preview cache files
 - Compatible with older Redmine releases
 - Can be used together with Redmine's Pandoc preview implementation
+- Flexible configuration options
+
+### Document Content
+
+MarkItDown previews focus on textual document content.
+
+Currently, embedded images contained in Office documents (for example `.docx` files) are not exported into the generated Markdown preview. Such images are therefore not displayed in the rendered Redmine preview.
+
+The original attachment itself remains unaffected and can still be downloaded normally.
 
 ## Rendering and Security
 

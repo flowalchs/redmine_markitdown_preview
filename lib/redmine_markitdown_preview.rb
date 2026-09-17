@@ -3,7 +3,7 @@
 require 'redmine_plugin_kit'
 
 module RedmineMarkitdownPreview
-  VERSION = '1.0.0'
+  VERSION = '1.0.1'
 
   include RedminePluginKit::PluginBase
 
@@ -28,7 +28,6 @@ module RedmineMarkitdownPreview
                           SettingsController]
 
       loader.apply!
-      loader.load_view_hooks!
     end
   end
 end

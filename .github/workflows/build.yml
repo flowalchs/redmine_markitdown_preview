@@ -138,7 +138,7 @@ jobs:
         run: bundle exec rake redmine:plugins:test NAME=redmine_markitdown_preview
         
       - name: Upload to Codecov
-        if: matrix.redmine == 'master'
+        if: matrix.redmine == 'master' && github.ref == 'refs/heads/main'
         uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
