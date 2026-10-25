@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-loader = RedminePluginKit::Loader.new plugin_id: 'redmine_markitdown_preview'
-
 Redmine::Plugin.register :redmine_markitdown_preview do
   name 'Redmine MarkItDown Preview'
   author 'Florian Walchshofer'
@@ -11,11 +9,9 @@ Redmine::Plugin.register :redmine_markitdown_preview do
   version RedmineMarkitdownPreview::VERSION
   requires_redmine :version_or_higher => '4.0.0'
 
-  settings default: loader.default_settings,
+  settings default: RedmineMarkitdownPreview.default_settings,
            partial: 'settings/markitdown'
 end
 
-RedminePluginKit::Loader.persisting do
-  # Hooks
-  loader.load_model_hooks!
-end
+# Load hook listener, patches are applied in after_plugins_loaded
+RedmineMarkitdownPreview::Hooks::ModelHook
