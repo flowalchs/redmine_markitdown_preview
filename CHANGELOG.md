@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.0.2 (2026-10-25)
+* refactor: remove redmine_plugin_kit dependency #1
+
 ## v1.0.1 (2026-09-17)
 * build: add automated release workflow
 * docs: improve README and installation guide
