@@ -136,13 +136,7 @@ cd $REDMINE_ROOT/plugins
 git clone https://github.com/flowalchs/redmine_markitdown_preview.git
 ```
 
-Install dependencies:
-
-```bash
-cd $REDMINE_ROOT
-
-bundle install
-```
+No additional gems are required.
 
 Restart Redmine.
 

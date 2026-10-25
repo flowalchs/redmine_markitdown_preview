@@ -1,15 +1,33 @@
 # frozen_string_literal: true
 
-require 'redmine_plugin_kit'
+require 'yaml'
 
 module RedmineMarkitdownPreview
-  VERSION = '1.0.1'
-
-  include RedminePluginKit::PluginBase
+  VERSION = '1.0.2'
+  PLUGIN_ID = 'redmine_markitdown_preview'
 
   class << self
+    def setup!
+      apply_patch Attachment, Patches::AttachmentPatch
+      apply_patch AttachmentsController, Patches::AttachmentsControllerPatch
+      apply_patch SettingsController, Patches::SettingsControllerPatch
+    end
+
+    def default_settings
+      @default_settings ||= begin
+        file = File.expand_path('../config/settings.yml', __dir__)
+        (YAML.safe_load(File.read(file)) || {}).with_indifferent_access
+      end
+    end
+
+    def settings
+      (Setting[:"plugin_#{PLUGIN_ID}"] || {}).with_indifferent_access
+    end
+
+    # stored setting with default setting as fall back
     def safe_setting(key)
-      setting(key.to_sym)
+      current = settings
+      current.key?(key) ? current[key] : default_settings[key]
     end
 
     def safe_setting_array(name)
@@ -22,12 +40,8 @@ module RedmineMarkitdownPreview
 
     private
 
-    def setup
-      loader.add_patch %w[Attachment
-                          AttachmentsController
-                          SettingsController]
-
-      loader.apply!
+    def apply_patch(target, patch)
+      target.include patch unless target.included_modules.include?(patch)
     end
   end
 end
